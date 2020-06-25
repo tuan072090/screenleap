@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "next": "9.4.4",
+    "nookies": "^2.3.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-sortable-hoc": "^1.11.0",
+    "sass": "^1.26.9"
   }
 }

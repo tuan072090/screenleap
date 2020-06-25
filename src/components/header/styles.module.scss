@@ -1,0 +1,66 @@
+@import "public/scss/custom_vars";
+
+.mainHeader{
+  padding: 1rem;
+
+  .inner{
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    h2{
+      margin-bottom: 0;
+    }
+    .title{
+      font-weight: 600;
+      padding-right: 20px;
+      margin-bottom: 0;
+    }
+
+    .formWrap{
+
+    }
+    .formPassword{
+
+      .meetingPassword{
+        padding: 12px;
+        height: auto;
+        position: relative;
+        border-radius: 3px;
+        min-width: 250px;
+      }
+
+      .startMeetingBtn{
+        padding: 12px 25px;
+        background: $primary;
+        border-radius: 3px;
+        color: #ffffff;
+        margin-left: 1.5rem;
+      }
+    }
+
+  }
+}
+
+
+@media (max-width: 768px){
+  .mainHeader {
+    .inner{
+      padding: 1.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .formWrap{
+        flex-direction: column;
+        align-items: flex-start;
+
+        .formPassword {
+          margin-top: 15px;
+          .meetingPassword{
+            width: 100%;
+          }
+        }
+
+      }
+    }
+  }
+}

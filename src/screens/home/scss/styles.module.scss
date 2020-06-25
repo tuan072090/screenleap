@@ -1,0 +1,18 @@
+.homeWrap{
+  padding: 1.2rem;
+
+  .header{
+    position: relative;
+    padding: 1.2rem 0;
+    margin-bottom: 1rem;
+    .title{
+      margin-bottom: 0;
+    }
+
+    .btn{
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+}

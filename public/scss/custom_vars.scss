@@ -1,0 +1,47 @@
+$primary: #40940D;
+$success: #34BA4C;
+$info: #047DD3;
+$warning: #E8E006;
+$danger: #DD3C18;
+
+/**
+  override bootstrap variables
+ */
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e5e5e5 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000000 !default;
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$body-bg: #F7F8FA;
+$body-color: #49505E;
+$font-size-base: 0.95rem;
+$link-color: #3d5059;
+$border-color: #e5e5e5;
+$nav-pills-link-active-bg: $body-bg;
+$nav-pills-link-active-color: $body-color;
+
+$theme-colors: (
+        "primary": $primary,
+        "danger": $danger,
+        "warning": $warning,
+        "info": $info,
+        "success": $success
+);

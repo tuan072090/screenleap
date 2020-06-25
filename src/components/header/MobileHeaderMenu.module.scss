@@ -1,0 +1,54 @@
+@import "public/scss/custom_vars";
+
+.mHeaderWrap{
+
+  .inner{
+    padding: 1rem 0;
+    position: relative;
+    .logo{
+      width: 120px;
+      display: block;
+      img{
+        width: 100%;
+      }
+    }
+    .menu{
+      position: absolute;
+      right: 0;
+      top: 10px;
+
+      border-color: #c6c8ca;
+      border-radius: 3px;
+    }
+  }
+
+  .menuList{
+    padding: 0 1rem;
+    background-color: white;
+    border-radius: 3px;
+    ul{
+      list-style-type: none;
+
+      li{
+        list-style: none;
+        .navLink{
+          padding: 1rem 0.5rem;
+
+          .navText{
+            padding-left: 10px;
+          }
+          svg{
+            margin-right: 10px;
+          }
+          .active{
+            color: $primary;
+          }
+        }
+      }
+
+
+
+    }
+
+  }
+}

@@ -12,7 +12,13 @@
     padding: 1.5rem 1rem;
     border-radius: 3px;
     margin-bottom: 1rem;
-    cursor: grab;
+    cursor: pointer;
+
+    &:hover {
+      .meetingDescControl{
+        display: flex !important;
+      }
+    }
   }
   .meetingName{
     flex: 8;
@@ -20,11 +26,80 @@
       margin-right: 15px;
     }
   }
+  .meetingDesc{
+    flex: 1;
+    .meetingDescText{
+      flex: 7;
+      white-space: nowrap;
+    }
+
+    .meetingDescControl{
+      flex: 2;
+      padding-right: 10px;
+      display: none;
+
+      a{
+        margin: 0 4px;
+        display: flex;
+        align-items: center;
+
+      }
+    }
+  }
   .viewCount{
     flex: 1;
   }
+  .inlineIcon{
+    margin-right: 0.5rem;
+  }
   .timeCount{
     flex: 1;
+  }
+  .mobileControl{
+    margin-top: 15px;
+    a{
+      margin-right: 15px;
+      color: $primary;
+    }
+  }
+
+  .btnOpen{
+
+  }
+
+  .meetingLinkWrap{
+    .meetingLink{
+      color: $info;
+    }
+
+    .linkCopy{
+      border: 1px solid $info;
+      border-radius: 2px;
+      padding: 8px;
+      margin-left: 8px;
+      justify-content: center;
+      display: flex;
+    }
+
+    &:hover {
+      .meetingLink{
+        color: #0641a0 !important;
+      }
+
+
+      .linkCopy {
+        border-color: #0641A0;
+      }
+    }
+  }
+
+
+  .btnStart{
+    &:hover{
+      color: $primary;
+      border-color: $primary;
+      background-color: transparent;
+    }
   }
 
   .timelineWrap{

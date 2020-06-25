@@ -1,9 +1,10 @@
 import React, {useContext} from 'react';
 import {meetingsStore, UPDATE_LIST_MEETING} from "./store";
-import {SortableContainer, SortableElement} from "react-sortable-hoc";
-import styles from "../../scss/listTimeline.module.scss";
+import {SortableContainer} from "react-sortable-hoc";
 import {switchIndexOfTwoItems} from "../../../../utils/utils";
 import {LoadingDefault} from "../../../../components/loading/LoadingDefault";
+import {ListSortableItem} from "./ListSortableItem";
+import ReactTooltip from "react-tooltip";
 
 export const ListContent = () => {
     const {meetings, dispatch} = useContext(meetingsStore);
@@ -19,27 +20,11 @@ export const ListContent = () => {
         });
     };
 
-    const SortableItem = SortableElement(({meeting}) => (
-        <li className={"d-flex align-items-center shadow-sm bg-white " + styles.listMeetingItem}>
-            <div className={"d-flex " + styles.meetingName}>
-                <strong>{meeting.name}</strong> - {meeting.description}
-            </div>
-
-            <div className={"d-flex " + styles.viewCount}>
-                {meeting.viewCount}
-            </div>
-
-            <div className={"d-flex justify-content-end " + styles.timeCount}>
-                <span>{meeting.minutes + ":00"}</span>
-            </div>
-        </li>
-    ));
-
     const SortableList = SortableContainer(({data}) => {
         return (
             <ul className="p-0">
                 {data.map((value, index) => (
-                    <SortableItem key={index} index={index} meeting={value}/>
+                    <ListSortableItem key={index} index={index} sortIndex={index} meeting={value}/>
                 ))}
             </ul>
         );
@@ -52,6 +37,10 @@ export const ListContent = () => {
     }
 
     return (
-        <SortableList data={meetings} onSortEnd={onSortEnd} />
+        [
+            <SortableList data={meetings} onSortEnd={onSortEnd} key="0"/>,
+            <ReactTooltip key="1" effect="solid" type="light" offset={{right: 250}} className="shadow"/>
+        ]
+
     )
 };

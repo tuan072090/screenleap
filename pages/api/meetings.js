@@ -9,56 +9,64 @@ export default (req, res) => {
                 description: "I would like to send the presentation we've discussed today. You...",
                 viewCount: 22,
                 minutes: 34,
-                duration: "4:00 PM - 5:00 PM"
+                duration: "4:00 PM - 5:00 PM",
+                link: "/came123"
             },
             {
                 name: "Meeting name",
                 description: "I would like to send the presentation we've discussed today. You may find it be... ",
                 viewCount: 4,
                 minutes: 6,
-                duration: "1:00 PM - 2:00 PM"
+                duration: "1:00 PM - 2:00 PM",
+                link: "/iuoqwesdd"
             },
             {
                 name: "New project about selling",
                 description: "I would like to send the presentation we've discussed today. You...",
                 viewCount: 23,
                 minutes: 31,
-                duration: "7:00 AM - 9:30 AM"
+                duration: "7:00 AM - 9:30 AM",
+                link: "/enfndjdd"
             },
             {
                 name: "Meeting name",
                 description: "I would like to send the presentation we've discussed today. You may find it be... ",
                 viewCount: 14,
                 minutes: 17,
-                duration: "9:00 AM - 11:30 AM"
+                duration: "9:00 AM - 11:30 AM",
+                link: "/dddkkkss"
             },
             {
                 name: "New project about selling",
                 description: "I would like to send the presentation we've discussed today. You...",
                 viewCount: 8,
                 minutes: 11,
-                duration: "8:30 AM - 9:05 AM"
+                duration: "8:30 AM - 9:05 AM",
+                link: "/tuannguyen123"
             },
             {
                 name: "Meeting name",
                 description: "I would like to send the presentation we've discussed today. You may find it be... ",
                 viewCount: 9,
                 minutes: 34,
-                duration: "10:00 AM - 11:30 AM"
+                duration: "10:00 AM - 11:30 AM",
+                link: "/tuannguyen123"
             },
             {
                 name: "New project about selling",
                 description: "I would like to send the presentation we've discussed today. You...",
                 viewCount: 15,
                 minutes: 18,
-                duration: "7:00 AM - 9:30 AM"
+                duration: "7:00 AM - 9:30 AM",
+                link: "/tuannguyen123"
             },
             {
                 name: "Meeting name",
                 description: "I would like to send the presentation we've discussed today. You may find it be... ",
                 viewCount: 33,
                 minutes: 8,
-                duration: "7:00 AM - 9:30 AM"
+                duration: "7:00 AM - 9:30 AM",
+                link: "/tuannguyen123"
             }
         ]
     };

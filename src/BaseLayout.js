@@ -9,6 +9,7 @@ import {
     UPDATE_REFRESH_TOKEN
 } from "./store";
 import {DesktopSidebar} from "./components/sidebar/DesktopSidebar";
+import {MobileHeaderMenu} from "./components/header/MobileHeaderMenu";
 
 const BaseLayout = Component => props => {
     const {dispatch} = useContext(store);
@@ -33,6 +34,8 @@ const BaseLayout = Component => props => {
                     console.log("log in client...");
                 `}} />
             </Head>
+
+            <MobileHeaderMenu/>
 
             <div className="container-fluid">
 

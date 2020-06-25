@@ -3,7 +3,12 @@ steps:
     args: ["build", "-t", "gcr.io/tm-group-2a9a5/screen-leap:$REVISION_ID", "."]
 
   - name: 'gcr.io/cloud-builders/docker'
+    args: ["tag", "gcr.io/tm-group-2a9a5/screen-leap:$REVISION_ID", "gcr.io/tm-group-2a9a5/screen-leap:latest"]
+
+  - name: 'gcr.io/cloud-builders/docker'
     args: ["push", "gcr.io/tm-group-2a9a5/screen-leap:$REVISION_ID"]
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ["push", "gcr.io/tm-group-2a9a5/screen-leap:latest"]
 
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [

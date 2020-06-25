@@ -3,8 +3,6 @@ import styles from './styles.module.scss';
 
 export const MainHeader = () => {
 
-
-
     return(
         <div className={styles.mainHeader +" p-4"}>
             <div className={"d-flex align-items-center "+styles.inner}>

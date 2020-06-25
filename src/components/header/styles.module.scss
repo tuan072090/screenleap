@@ -48,15 +48,26 @@
       padding: 1.5rem;
       flex-direction: column;
       align-items: flex-start;
-
+      .title{
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: center;
+      }
       .formWrap{
         flex-direction: column;
         align-items: flex-start;
 
         .formPassword {
           margin-top: 15px;
+          flex-direction: column;
+
           .meetingPassword{
             width: 100%;
+          }
+
+          .startMeetingBtn{
+            margin: 15px 0 0;
+            text-align: center;
           }
         }
 

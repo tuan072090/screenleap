@@ -1,0 +1,81 @@
+@import "public/scss/custom_vars";
+
+.listWrap{
+  padding: 1rem;
+
+  .listMeeting{
+    padding: 1rem;
+    background: #F5F8FA;
+  }
+
+  .listMeetingItem{
+    padding: 1.5rem 1rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    cursor: grab;
+
+    &.noDrag{
+      cursor: pointer;
+    }
+  }
+  .meetingName{
+    flex: 8;
+    strong{
+      margin-right: 15px;
+    }
+  }
+  .viewCount{
+    flex: 1;
+  }
+  .timeCount{
+    flex: 1;
+  }
+
+  .inlineIcon{
+    margin-right: 0.5rem;
+  }
+
+  .timelineWrap{
+    //border: 1px solid #c6c8ca;
+
+    .date{
+      margin-top: -20px;
+      margin-bottom: 0;
+    }
+    .timeline{
+      list-style-type: none;
+      padding-left: 6px;
+      padding-top: 1rem;
+      position: relative;
+
+      &:after{
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: #E3E2F0;
+        top: 2.5rem;
+        bottom: 0;
+        left: 15px;
+      }
+    }
+
+    .timelineItem{
+      padding: 1.5rem 0 1.5rem 40px;
+      position: relative;
+      margin-bottom: 1rem;
+
+      &:after{
+        content: '';
+        position: absolute;
+        background-color: white;
+        border: 3px solid #838A99;
+        width: 22px;
+        height: 22px;
+        top: 1.5rem;
+        left: 0;
+        border-radius: 50%;
+        z-index: 1;
+      }
+    }
+  }
+}

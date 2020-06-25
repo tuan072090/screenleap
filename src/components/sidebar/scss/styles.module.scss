@@ -10,26 +10,28 @@
   padding: 48px 0 0;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 
-  .logo{
+  .logo {
     padding: 0 15px 20px 30px;
   }
 
-  .plan{
+  .plan {
     padding: 20px 20px 40px 30px;
 
-    .planStatus{
-      .countdown{
+    .planStatus {
+      .countdown {
         border: 1px solid #FF9E0B;
         background: #F8EFE2;
         border-radius: 3px;
         padding: 0 10px;
         height: 34px;
       }
-      .timeText{
+
+      .timeText {
         padding: 15px;
       }
     }
-    .planCta{
+
+    .planCta {
       margin: 10px 0;
       font-size: 1.2rem;
       color: $primary;
@@ -38,9 +40,10 @@
   }
 
 
-  .spaceNav{
+  .spaceNav {
     padding: 15px;
   }
+
   .navLink {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -64,7 +67,8 @@
     &.active {
       border-left: 3px solid $primary;
       background: rgba(244, 245, 245, 0.7);
-      .navIcon svg * {
+
+      svg * {
         fill: $primary;
       }
 

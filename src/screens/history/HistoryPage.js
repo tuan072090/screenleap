@@ -2,23 +2,22 @@ import React from 'react';
 import Head from "next/head";
 import BaseLayout from "../../BaseLayout";
 import styles from './scss/styles.module.scss';
-import {HomeHeader} from "./components/HomeHeader";
+import {ListHeader} from "./components/ListHeader";
 import {MainContent} from "./components/list-meeting/MainContent";
 import ServerSideRequest from "../../services/ServerSideRequest";
 import {StateMeetingsProvider} from "./components/list-meeting/store";
 import {FetchData} from "../../utils/hooks/useRequest";
 
-const HomePage =  BaseLayout(({listMeeting}) => {
-
+export const HistoryPage =  BaseLayout(({listMeeting}) => {
 
     return (
         <StateMeetingsProvider>
-            <div className={styles.homeWrap}>
+            <div className={styles.listWrap}>
                 <Head>
-                    <title>Meetings - Screen Leap</title>
+                    <title>History - Screen Leap</title>
                 </Head>
 
-                <HomeHeader/>
+                <ListHeader/>
 
                 <MainContent listMeeting={listMeeting}/>
             </div>
@@ -27,8 +26,7 @@ const HomePage =  BaseLayout(({listMeeting}) => {
 });
 
 export const ServerSideProps = ServerSideRequest(async ({params, query, provinceId}) => {
-
-    const data = await FetchData("/api/meetings");
+    const data = await FetchData("/api/history");
 
     return {
         props: {
@@ -36,5 +34,3 @@ export const ServerSideProps = ServerSideRequest(async ({params, query, province
         }
     }
 });
-
-export {HomePage}

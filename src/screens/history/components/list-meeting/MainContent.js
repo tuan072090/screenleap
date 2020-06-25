@@ -21,7 +21,7 @@ export const MainContent = ({listMeeting}) => {
     }, [listMeeting]);
 
     return (
-        <div className={"row " + styles.listWrap}>
+        <div className={"row px-0 px-sm-3 " + styles.listWrap}>
             <div className="col-12 col-md-4 col-lg-3 p-0 d-none d-md-block">
                 <TimeLineBar/>
             </div>

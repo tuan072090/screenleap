@@ -13,5 +13,5 @@ steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [
       'compute', 'ssh', 'tuannguyen@tm-loyalty-development', '--zone=asia-east2-c',
-      '--command=docker pull gcr.io/tm-group-2a9a5/screen-leap:$REVISION_ID && docker service update --image gcr.io/tm-group-2a9a5/screen-leap:$REVISION_ID --with-registry-auth internal_api_service_internal_store'
+      '--command=docker pull gcr.io/tm-group-2a9a5/screen-leap:$REVISION_ID && docker service update --image gcr.io/tm-group-2a9a5/screen-leap:$REVISION_ID --with-registry-auth test_screen_leap'
     ]

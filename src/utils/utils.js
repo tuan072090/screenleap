@@ -21,3 +21,8 @@ export function switchIndexOfTwoItems(list=[], oldIndex, newIndex) {
 
     return result;
 }
+
+
+export function isActiveRoute() {
+
+}

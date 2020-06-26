@@ -10,13 +10,9 @@ import {
 } from "./store";
 import {DesktopSidebar} from "./components/sidebar/DesktopSidebar";
 import {MobileHeaderMenu} from "./components/header/MobileHeaderMenu";
+import {RightContentWrap} from "./components";
 
 const BaseLayout = Component => props => {
-    const {dispatch} = useContext(store);
-
-    useEffect(() => {
-        console.log("call with base layout");
-    },[]);
 
     return (
         <Fragment>
@@ -54,8 +50,9 @@ const BaseLayout = Component => props => {
 
                     </div>
                 </div>
-
             </div>
+
+            <RightContentWrap/>
 
             <DesktopFooter />
 

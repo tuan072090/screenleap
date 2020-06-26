@@ -3,7 +3,7 @@ import React, {createContext, useReducer} from "react";
 export const UPDATE_ACCESS_TOKEN = 'UPDATE_ACCESS_TOKEN';
 export const UPDATE_REFRESH_TOKEN = 'UPDATE_REFRESH_TOKEN';
 export const UPDATE_NOTIFICATION_TOKEN = 'UPDATE_NOTIFICATION_TOKEN';
-
+export const UPDATE_RIGHT_CONTENT = 'UPDATE_RIGHT_CONTENT';
 
 export const logReducer = (func) => (state, action) => {
     //console.log("%c"+action["type"],'color: #bada55', "%cData: ", 'color: #bada55', action["data"]);
@@ -13,7 +13,8 @@ export const logReducer = (func) => (state, action) => {
 const initialState = {
     accessToken: "",
     refreshToken: "",
-    notificationToken: ""
+    notificationToken: "",
+    RightContent: null
 };
 
 const store = createContext(initialState);
@@ -31,6 +32,9 @@ const reducer = logReducer((state, action) => {
 
         case UPDATE_NOTIFICATION_TOKEN:
             return {...state, notificationToken: data};
+
+        case UPDATE_RIGHT_CONTENT:
+            return {...state, RightContent: data};
 
         default:
             throw new Error('Unexpected action');

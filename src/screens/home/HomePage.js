@@ -10,7 +10,6 @@ import {FetchData} from "../../utils/hooks/useRequest";
 
 const HomePage =  BaseLayout(({listMeeting}) => {
 
-
     return (
         <StateMeetingsProvider>
             <div className={styles.homeWrap}>

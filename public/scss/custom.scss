@@ -1,36 +1,109 @@
 @import "./custom_vars";
 @import "../bootstrap/scss/bootstrap";
 
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
 
-.main-wrap{
+.main-wrap {
   background: $primary;
-  .main-inner{
+
+  .main-inner {
     background: white;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     height: 100%;
   }
 }
+
 .collapse:not(.show) {
   display: none;
 }
-@media (min-width: 768px){
-  .pl-md-4, .px-md-4 {
-    padding-left: 1.5rem!important;
-    padding-right: 1.5rem!important;
+
+.rightContent {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 11;
+
+  .innerContent {
+    background-color: #fff;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    height: 100%;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    z-index: 11;
+    pointer-events: auto;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    will-change: opacity;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+  }
+}
+
+.rightContent--visible {
+  pointer-events: auto;
+
+  .innerContent {
+    -webkit-transform: translateX(calc(100vw - 100%));
+    transform: translateX(calc(100vw - 100%));
+  }
+
+  &.rightContent--animatable {
+    .innerContent {
+      transition: all 330ms ease-out;
+    }
+  }
+
+  &:after {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.rightContent--animatable {
+  .innerContent {
+    transition: all 130ms ease-in;
   }
 }
 
 
-@media (min-width: 576px){
+@media (min-width: 768px) {
+  .pl-md-4, .px-md-4 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+
+@media (min-width: 576px) {
   .ml-sm-auto, .mx-sm-auto {
-    margin-left: auto!important;
+    margin-left: auto !important;
   }
 }

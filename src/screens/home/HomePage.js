@@ -12,7 +12,7 @@ const HomePage =  BaseLayout(({listMeeting}) => {
 
     return (
         <StateMeetingsProvider>
-            <div className={styles.homeWrap}>
+            <div className={"content-body " + styles.homeWrap}>
                 <Head>
                     <title>Meetings - Screen Leap</title>
                 </Head>

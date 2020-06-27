@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import {TimeLineBar} from "./TimeLineBar";
 import styles from '../../scss/listTimeline.module.scss';
-import {meetingsStore, UPDATE_COUNT_MEETING, UPDATE_LIST_MEETING} from "./store";
+import {meetingsStore, UPDATE_COUNT_MEETING, UPDATE_LIST_MEETING} from "../../store";
 import {ListContent} from "./ListContent";
 
 export const MainContent = ({listMeeting}) => {

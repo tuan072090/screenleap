@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import {meetingsStore} from "./store";
+import {meetingsStore} from "../../store";
 import styles from '../../scss/listTimeline.module.scss';
 
 export const TimeLineBar = () => {

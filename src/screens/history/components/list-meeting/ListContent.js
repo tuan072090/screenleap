@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {meetingsStore} from "./store";
+import {meetingsStore} from "../../store";
 import {LoadingDefault} from "../../../../components/loading/LoadingDefault";
 import {ListItem} from "./ListItem";
 

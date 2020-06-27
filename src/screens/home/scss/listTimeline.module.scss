@@ -25,12 +25,16 @@
     strong{
       margin-right: 15px;
     }
+    overflow: hidden;
   }
   .meetingDesc{
     flex: 1;
+
     .meetingDescText{
       flex: 7;
+      padding-right: 5px;
       white-space: nowrap;
+      overflow: hidden;
     }
 
     .meetingDescControl{

@@ -1,5 +1,5 @@
 import React, {createContext, useReducer} from "react";
-import {logReducer} from "../../../../store";
+import {logReducer} from "../../store";
 
 export const UPDATE_LIST_MEETING = 'UPDATE_LIST_MEETING';
 export const UPDATE_COUNT_MEETING = 'UPDATE_COUNT_MEETING';

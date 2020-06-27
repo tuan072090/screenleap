@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {store, UPDATE_RIGHT_CONTENT} from "../store";
+import {store, UPDATE_RIGHT_CONTENT} from "../../store";
 
 export const RightContentWrap = () => {
     const [visible, setVisible] = useState(false);
@@ -22,7 +22,7 @@ export const RightContentWrap = () => {
     const hide = () => {
         setVisible(false);
         dispatch({type: UPDATE_RIGHT_CONTENT, data: null});
-        document.getElementById("rightContent").removeEventListener("click", hide)
+        document.getElementById("rightContent").removeEventListener("click", bgClick)
     };
 
     const bgClick = (event) => {

@@ -12,6 +12,10 @@
 
   .logo {
     padding: 0 15px 20px 30px;
+
+    .logoImg{
+      width: 80%;
+    }
   }
 
   .plan {
@@ -38,7 +42,6 @@
       font-weight: 500;
     }
   }
-
 
   .spaceNav {
     padding: 15px;
@@ -87,4 +90,8 @@
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+
 }

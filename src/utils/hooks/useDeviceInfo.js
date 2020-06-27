@@ -4,7 +4,8 @@ const useDeviceInfo = () => {
     const [device, setDevice] = useState("desktop");
 
     useEffect(() => {
-        const deviceName = window.innerWidth <= 768 ? "mobile" : window.innerWidth <= 992 ? "tablet" : "desktop";
+        const deviceName = window.innerWidth <= 768 ? "mobile" : window.innerWidth <= 992 ? "tablet" : window.innerWidth <= 1200 ? "desktop" : "largeDesktop";
+        console.log("window.innerWidth", window.innerWidth)
 
         setDevice(deviceName);
 
@@ -14,7 +15,8 @@ const useDeviceInfo = () => {
     }, []);
 
     const changeWindowSize = () => {
-        const deviceName = window.innerWidth <= 768 ? "mobile" : window.innerWidth <= 992 ? "tablet" : "desktop";
+        const deviceName = window.innerWidth <= 768 ? "mobile" : window.innerWidth <= 992 ? "tablet" : window.innerWidth <= 1200 ? "desktop" : "largeDesktop";
+        console.log("window.innerWidth", window.innerWidth)
         setDevice(deviceName);
     };
 

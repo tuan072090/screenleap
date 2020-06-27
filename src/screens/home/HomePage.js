@@ -4,7 +4,7 @@ import BaseLayout from "../../BaseLayout";
 import styles from './scss/styles.module.scss';
 import {HomeHeader} from "./components/HomeHeader";
 import {MainContent} from "./components/list-meeting/MainContent";
-import ServerSideRequest from "../../services/ServerSideRequest";
+import ServerSideRequest from "../../utils/services/ServerSideRequest";
 import {StateMeetingsProvider} from "./components/list-meeting/store";
 import {FetchData} from "../../utils/hooks/useRequest";
 

@@ -3,9 +3,7 @@ import {meetingsStore} from "./store";
 import styles from '../../scss/listTimeline.module.scss';
 
 export const TimeLineBar = () => {
-    const {indexUpdating, meetings} = useContext(meetingsStore);
-
-    console.log("indexUpdating...", indexUpdating);
+    const {meetings} = useContext(meetingsStore);
 
     if(!meetings){
         return (

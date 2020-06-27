@@ -2,8 +2,12 @@ import React from 'react';
 import styles from './scss/styles.module.scss';
 import Link from 'next/link'
 import { withRouter } from 'next/router'
+import {useDeviceInfo} from "../../utils/hooks/useDeviceInfo";
 
 const DesktopSidebar = withRouter(({router}) => {
+    const device = useDeviceInfo();
+
+    console.log("device", device);
     const isActiveRoute = (currentRoute) => {
         return currentRoute === router.pathname ? styles.active : ""
     };
@@ -12,8 +16,8 @@ const DesktopSidebar = withRouter(({router}) => {
         <nav className={"col-md-3 col-lg-2 d-md-block bg-light collapse " + styles.sidebar}>
             <div className={styles.logo}>
 
-                <a className="d-flex" href="/">
-                    <img src="/img/logo.svg" style={{width: "80%"}} alt="logo Screen leap"/>
+                <a className="d-flex" href="/" title="Screen Leap">
+                    <img src="/img/logo.svg" className={styles.logoImg} alt="logo Screen leap"/>
                 </a>
 
             </div>
